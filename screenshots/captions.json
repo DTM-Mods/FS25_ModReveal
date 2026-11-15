@@ -1,0 +1,22 @@
+{
+  "2.jpg": {
+    "title": "Left Alt + I: every mod at a glance",
+    "text": "Author, file and what each mod puts in this savegame. Updated mods are tagged.",
+    "at": "bottom"
+  },
+  "3.jpg": {
+    "title": "Sort by what is in the game",
+    "text": "Mods with nothing in this savegame are marked: those could be removed.",
+    "at": "bottom"
+  },
+  "4.jpg": {
+    "title": "DLC too",
+    "text": "Every active DLC and how much of it is in your savegame.",
+    "at": "bottom"
+  },
+  "5.jpg": {
+    "title": "What changed since last time",
+    "text": "New, updated and removed mods since you last played this savegame.",
+    "at": "bottom"
+  }
+}

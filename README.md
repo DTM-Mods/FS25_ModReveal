@@ -42,6 +42,28 @@ Console: `modReveal` (the list), `modRevealExport` (write the files), `modReveal
 
 It only reads; it changes nothing in the game.
 
+<!-- dtm-screenshots -->
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/DTM-Mods/.github/main/assets/screenshots.jpg" alt="Screenshots" width="100%">
+</p>
+
+<p align="center">
+  <img src="screenshots/1.jpg" alt="A farm yard with grain silos and parked machines behind a field in the evening sun" width="49%">
+  <img src="screenshots/2.jpg" alt="Left Alt + I: every mod at a glance, with author, file and what each mod puts in this savegame; updated mods are tagged" width="49%">
+</p>
+
+<p align="center">
+  <img src="screenshots/3.jpg" alt="Sort by what is in the game: mods with nothing in this savegame are marked, those could be removed" width="49%">
+  <img src="screenshots/4.jpg" alt="DLC too: every active DLC and how much of it is in your savegame" width="49%">
+</p>
+
+<p align="center">
+  <img src="screenshots/5.jpg" alt="What changed since last time: new, updated and removed mods since you last played this savegame" width="49%">
+</p>
+
+<!-- /dtm-screenshots -->
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/DTM-Mods/.github/main/assets/installation.jpg" alt="Installation" width="100%">
 </p>
