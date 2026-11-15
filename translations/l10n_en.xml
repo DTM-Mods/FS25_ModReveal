@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+    <texts>
+        <text name="input_MR_TOGGLE" text="Mod Reveal: mod list"/>
+        <text name="mr_title" text="MOD REVEAL"/>
+
+        <text name="mr_tabActive" text="ACTIVE MODS (%d)"/>
+        <text name="mr_tabDLC" text="DLC (%d)"/>
+        <text name="mr_tabUnused" text="NOT USED (%d)"/>
+        <text name="mr_tabChanges" text="CHANGES (%d)"/>
+
+        <text name="mr_buttonSave" text="SAVE LIST"/>
+        <text name="mr_buttonSort" text="SORT: %s"/>
+        <text name="mr_sort_name" text="NAME"/>
+        <text name="mr_sort_ingame" text="IN GAME"/>
+        <text name="mr_sort_author" text="AUTHOR"/>
+        <text name="mr_sort_file" text="FILE"/>
+        <text name="mr_sort_load" text="LOAD ORDER"/>
+        <text name="mr_searchHint" text="Type to search..."/>
+
+        <text name="mr_sumActive" text="%d mods + %d DLC active"/>
+        <text name="mr_sumScripts" text="Script mods: %d"/>
+        <text name="mr_sumMaps" text="Maps: %d"/>
+        <text name="mr_sumStoreItems" text="Store items: %d"/>
+        <text name="mr_sumNoMP" text="%d not for multiplayer"/>
+        <text name="mr_sumFolders" text="%d unzipped"/>
+        <text name="mr_sumDuplicates" text="%d possible duplicates"/>
+        <text name="mr_sumIdle" text="%d with nothing in game"/>
+
+        <text name="mr_colMod" text="Mod"/>
+        <text name="mr_colInfo" text="Info"/>
+        <text name="mr_colInGame" text="In game"/>
+        <text name="mr_colVersion" text="Version"/>
+        <text name="mr_colAuthor" text="Author"/>
+        <text name="mr_colFile" text="File"/>
+
+        <text name="mr_chip_MAP" text="MAP"/>
+        <text name="mr_chip_SCRIPT" text="SCRIPT"/>
+        <text name="mr_chip_DLC" text="DLC"/>
+        <text name="mr_chip_NOMP" text="NO MP"/>
+        <text name="mr_chip_FOLDER" text="FOLDER"/>
+        <text name="mr_chip_DUP" text="DUPLICATE?"/>
+        <text name="mr_chip_NEW" text="NEW"/>
+        <text name="mr_chip_UPDATED" text="UPDATED"/>
+        <text name="mr_chip_OLDER" text="OLDER"/>
+        <text name="mr_chip_CHANGED" text="NEW FILE"/>
+        <text name="mr_chip_REMOVED" text="REMOVED"/>
+        <text name="mr_chip_IDLE" text="NOTHING IN GAME"/>
+
+        <text name="mr_inGameMap" text="map"/>
+        <text name="mr_inGameYours" text="%d (%d yours)"/>
+        <text name="mr_useCounting" text="Counting what is in the savegame..."/>
+        <text name="mr_useCurrentMap" text="The map you are playing on."/>
+        <text name="mr_useVehicles" text="vehicles / pallets: %d"/>
+        <text name="mr_usePlaceables" text="buildings: %d"/>
+        <text name="mr_useHandTools" text="hand tools: %d"/>
+        <text name="mr_useYours" text="(%d yours)"/>
+        <text name="mr_useInGame" text="In this savegame: %s"/>
+        <text name="mr_useNothingIdle" text="Nothing from this mod is in this savegame: it could be removed."/>
+        <text name="mr_useNothing" text="Nothing from this mod is in this savegame."/>
+        <text name="mr_useNoItems" text="Adds no shop items (scripts, fill types or settings only)."/>
+        <text name="mr_useShop" text="Shop items (%d): %s"/>
+
+        <text name="mr_empty" text="Nothing here."/>
+        <text name="mr_noMatch" text="No mod matches the search. Backspace or Esc clears it."/>
+        <text name="mr_firstVisit" text="First time here: the mod list is saved now. From the next load on, this tab shows what was updated, added or removed."/>
+        <text name="mr_noChanges" text="No mods changed since the last time you played here."/>
+
+        <text name="mr_detVersion" text="Version: %s"/>
+        <text name="mr_detAuthor" text="Author: %s"/>
+        <text name="mr_detFile" text="File: %s"/>
+        <text name="mr_detHash" text="Hash: %s"/>
+        <text name="mr_kindDLC" text="DLC"/>
+        <text name="mr_kindMap" text="Map"/>
+        <text name="mr_kindScript" text="Script files: %d"/>
+        <text name="mr_kindSpecs" text="Specializations: %d"/>
+        <text name="mr_kindStore" text="Store items: %d"/>
+        <text name="mr_detMPYes" text="Multiplayer: yes"/>
+        <text name="mr_detMPNo" text="Multiplayer: no"/>
+        <text name="mr_detDescVersion" text="descVersion %d"/>
+        <text name="mr_detNotUsed" text="Installed, not used here"/>
+        <text name="mr_detNeeds" text="Needs: %s"/>
+        <text name="mr_detFolderWarn" text="Unzipped folder: multiplayer only accepts zipped mods."/>
+        <text name="mr_detDuplicateWarn" text="Another active mod has the same name: maybe the same mod twice?"/>
+        <text name="mr_detNoMPWarn" text="This mod says it doesn't support multiplayer."/>
+
+        <text name="mr_changeNew" text="New since last time"/>
+        <text name="mr_changeUpdated" text="Updated %s > %s"/>
+        <text name="mr_changeOlder" text="Older version %s > %s"/>
+        <text name="mr_changeChanged" text="Same version, different file"/>
+        <text name="mr_changeRemoved" text="No longer used"/>
+
+        <text name="mr_modeSingle" text="Single player"/>
+        <text name="mr_modeHost" text="Multiplayer host"/>
+        <text name="mr_modeClient" text="Multiplayer"/>
+        <text name="mr_modeDedicated" text="Dedicated server"/>
+
+        <text name="mr_keyClose" text="Close"/>
+        <text name="mr_keyLeftRight" text="LEFT / RIGHT"/>
+        <text name="mr_keyTab" text="Tab"/>
+        <text name="mr_keyUpDown" text="UP / DOWN"/>
+        <text name="mr_keySelect" text="Select"/>
+        <text name="mr_keySearch" text="Search"/>
+
+        <text name="mr_saved" text="Saved: %s"/>
+        <text name="mr_saveFailed" text="Could not write to %s"/>
+        <text name="mr_notifyChanges" text="Mod Reveal: %d updated, %d new, %d removed since last time. Left Alt + I shows them."/>
+    </texts>
+</l10n>

@@ -1,0 +1,7 @@
+# Files that stay in the repository but never go into the mod zip (see DTM-Mods/.github ci/README.md)
+
+# editable icon source (the zip ships icon_ModReveal.dds)
+icon_ModReveal.png
+# build script and offline test
+tools/
+tests/
