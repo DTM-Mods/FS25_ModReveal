@@ -6,9 +6,11 @@
         <en>Mod Reveal</en>
     </title>
     <description>
-        <en><![CDATA[Shows every mod and DLC your game is running, with its version, author and file name, and what each mod actually has in your savegame.
+        <en><![CDATA[Description: Lists every mod and DLC your game is running, with its version, author and file name, and shows what each mod actually has in your savegame. It only reads; it changes nothing in the game.
+Hotkeys: Left Alt + I opens the mod list. Controller: none by default, set one for "Mod Reveal: mod list" under Settings > Controls. In the list: Left / Right switch tabs, Up / Down or the mouse wheel select, typing searches, Esc closes; on a controller the stick selects, LB / RB switch tabs, B closes.
+GitHub: https://github.com/DTM-Mods/FS25_ModReveal
 
-Press Left Alt + I to open the list. Tabs:
+Tabs:
 - Active mods: everything loaded right now, with tags for maps, script mods, mods that don't support multiplayer, unzipped folders and possible duplicates (two mods with the same name).
 - DLC: the DLCs in use.
 - Not used: mods in your mods folder that this savegame or server doesn't use.
@@ -18,19 +20,21 @@ In game: how many vehicles, pallets, buildings and hand tools from each mod are 
 
 Select a mod to see more: mod name, file hash (the one the server compares), what it puts in the shop, scripts, needed mods and the start of its description.
 
-Type to search by name, author, file or version. Left / Right: tab. Up / Down or the mouse wheel: select. Click SORT to sort by name, in game, author, file or load order. Esc closes. Gamepad: stick to select, LB / RB for tabs, B closes (bind a button to "Mod Reveal: mod list" in the controls to open it).
+Type to search by name, author, file or version. Click SORT to sort by name, in game, author, file or load order.
 
 On every load the list is written to modSettings/FS25_ModReveal/ModList.txt and ModList.csv, ready to paste into Discord or open in a spreadsheet; SAVE LIST writes them again. Changes.txt lists the changes of the last load for server scripts. On a dedicated server the files and a summary in the server log show what the server runs.
 
 Console: modReveal, modRevealExport, modRevealChanges, modRevealShow (opens the list).
 
-Only reads; it changes nothing in the game. Works in single player and multiplayer.
+Works in single player and multiplayer.
 
 Changelog 1.1.0.3:
 - Updated for the current game version (modDesc version 116).]]></en>
-        <de><![CDATA[Zeigt jeden Mod und DLC, den dein Spiel nutzt, mit Version, Autor und Dateiname, und was jeder Mod tatsächlich in deinem Spielstand hat.
+        <de><![CDATA[Beschreibung: Zeigt jeden Mod und DLC, den dein Spiel nutzt, mit Version, Autor und Dateiname, und was jeder Mod tatsächlich in deinem Spielstand hat. Liest nur; ändert nichts im Spiel.
+Tastenkombinationen: Linke Alt + I öffnet die Modliste. Controller: standardmäßig keine, unter Einstellungen > Steuerung eine Taste für "Mod Reveal: Modliste" belegen. In der Liste: Links / Rechts wechselt den Reiter, Hoch / Runter oder Mausrad wählt aus, Tippen sucht, Esc schließt; am Controller wählt der Stick aus, LB / RB wechseln den Reiter, B schließt.
+GitHub: https://github.com/DTM-Mods/FS25_ModReveal
 
-Linke Alt + I öffnet die Liste. Reiter:
+Reiter:
 - Aktive Mods: alles, was gerade geladen ist, mit Markierungen für Karten, Skript-Mods, Mods ohne Multiplayer, entpackte Ordner und mögliche Duplikate (zwei Mods mit demselben Namen).
 - DLC: die genutzten DLCs.
 - Nicht genutzt: Mods in deinem Mod-Ordner, die dieser Spielstand oder Server nicht nutzt.
@@ -40,13 +44,13 @@ Im Spiel: wie viele Fahrzeuge, Paletten, Gebäude und Handwerkzeuge jedes Mods i
 
 Wähle einen Mod für mehr: Modname, Datei-Hash (den der Server vergleicht), was er in den Shop bringt, Skripte, benötigte Mods und der Anfang seiner Beschreibung.
 
-Tippen sucht nach Name, Autor, Datei oder Version. Links / Rechts: Reiter. Hoch / Runter oder Mausrad: auswählen. SORTIERT ändert die Sortierung. Esc schließt. Gamepad: Stick zum Auswählen, LB / RB für Reiter, B schließt (zum Öffnen in der Steuerung eine Taste für "Mod Reveal: Modliste" belegen).
+Tippen sucht nach Name, Autor, Datei oder Version. SORTIERT ändert die Sortierung.
 
 Bei jedem Laden wird die Liste nach modSettings/FS25_ModReveal/ModList.txt und ModList.csv geschrieben; LISTE SPEICHERN schreibt sie neu.
 
 Konsole: modReveal, modRevealExport, modRevealChanges, modRevealShow (öffnet die Liste).
 
-Liest nur; ändert nichts im Spiel. Funktioniert im Einzelspieler und Multiplayer.
+Funktioniert im Einzelspieler und Multiplayer.
 
 Changelog 1.1.0.3:
 - An die aktuelle Spielversion angepasst (modDesc-Version 116).]]></de>
