@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <modDesc descVersion="116" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/modDesc.xsd">
     <author>DTM Mods, Fennell</author>
-    <version>1.1.0.3</version>
+    <version>1.1.0.4</version>
     <title>
         <en>Mod Reveal</en>
     </title>
@@ -28,8 +28,9 @@ Console: modReveal, modRevealExport, modRevealChanges, modRevealShow (opens the 
 
 Works in single player and multiplayer.
 
-Changelog 1.1.0.3:
-- Updated for the current game version (modDesc version 116).]]></en>
+Changelog 1.1.0.4:
+- Description in GIANTS' ModHub layout (category, price, upkeep or hotkeys at the top).
+- New mod icon in the ModHub standard.]]></en>
         <de><![CDATA[Beschreibung: Zeigt jeden Mod und DLC, den dein Spiel nutzt, mit Version, Autor und Dateiname, und was jeder Mod tatsächlich in deinem Spielstand hat. Liest nur; ändert nichts im Spiel.
 Tastenkombinationen: Linke Alt + I öffnet die Modliste. Controller: standardmäßig keine, unter Einstellungen > Steuerung eine Taste für "Mod Reveal: Modliste" belegen. In der Liste: Links / Rechts wechselt den Reiter, Hoch / Runter oder Mausrad wählt aus, Tippen sucht, Esc schließt; am Controller wählt der Stick aus, LB / RB wechseln den Reiter, B schließt.
 GitHub: https://github.com/DTM-Mods/FS25_ModReveal
@@ -52,8 +53,9 @@ Konsole: modReveal, modRevealExport, modRevealChanges, modRevealShow (öffnet di
 
 Funktioniert im Einzelspieler und Multiplayer.
 
-Changelog 1.1.0.3:
-- An die aktuelle Spielversion angepasst (modDesc-Version 116).]]></de>
+Changelog 1.1.0.4:
+- Beschreibung im ModHub-Aufbau von GIANTS (Kategorie, Preis, Unterhalt bzw. Tasten oben).
+- Neues Mod-Icon im ModHub-Standard.]]></de>
     </description>
 
     <iconFilename>icon_ModReveal.dds</iconFilename>
