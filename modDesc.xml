@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<modDesc descVersion="115" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/modDesc.xsd">
+<modDesc descVersion="116" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/modDesc.xsd">
     <author>DTM Mods, Fennell</author>
-    <version>1.1.0.2</version>
+    <version>1.1.0.3</version>
     <title>
         <en>Mod Reveal</en>
     </title>
@@ -26,8 +26,8 @@ Console: modReveal, modRevealExport, modRevealChanges, modRevealShow (opens the 
 
 Only reads; it changes nothing in the game. Works in single player and multiplayer.
 
-Changelog 1.1.0.2:
-- Meets the GIANTS ModHub checks: errors are no longer hidden, so they show in the log.]]></en>
+Changelog 1.1.0.3:
+- Updated for the current game version (modDesc version 116).]]></en>
         <de><![CDATA[Zeigt jeden Mod und DLC, den dein Spiel nutzt, mit Version, Autor und Dateiname, und was jeder Mod tatsächlich in deinem Spielstand hat.
 
 Linke Alt + I öffnet die Liste. Reiter:
@@ -48,8 +48,8 @@ Konsole: modReveal, modRevealExport, modRevealChanges, modRevealShow (öffnet di
 
 Liest nur; ändert nichts im Spiel. Funktioniert im Einzelspieler und Multiplayer.
 
-Changelog 1.1.0.2:
-- Erfüllt die GIANTS-ModHub-Prüfungen: Fehler werden nicht mehr versteckt und erscheinen im Log.]]></de>
+Changelog 1.1.0.3:
+- An die aktuelle Spielversion angepasst (modDesc-Version 116).]]></de>
     </description>
 
     <iconFilename>icon_ModReveal.dds</iconFilename>
