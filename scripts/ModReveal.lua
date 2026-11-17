@@ -85,8 +85,8 @@ function ModReveal.getActiveModItems()
     if g_modManager == nil or type(g_modManager.getActiveMods) ~= "function" then
         return {}
     end
-    local ok, items = pcall(g_modManager.getActiveMods, g_modManager)
-    if ok and type(items) == "table" then
+    local items = g_modManager:getActiveMods()
+    if type(items) == "table" then
         return items
     end
     return {}
@@ -98,8 +98,8 @@ function ModReveal.getInstalledModItems()
         return nil
     end
     if type(g_modManager.getMods) == "function" then
-        local ok, items = pcall(g_modManager.getMods, g_modManager)
-        if ok and type(items) == "table" and #items > 0 then
+        local items = g_modManager:getMods()
+        if type(items) == "table" and #items > 0 then
             return items
         end
     end
@@ -185,7 +185,7 @@ function ModReveal.readModDesc(entry, item)
         return
     end
 
-    local ok, err = pcall(function()
+    do
         entry.descVersion = getXMLInt(xml, "modDesc#descVersion")
         local isMultiplayer = getXMLBool(xml, "modDesc.multiplayer#supported")
         if entry.isMultiplayer == nil then
@@ -207,11 +207,8 @@ function ModReveal.readModDesc(entry, item)
         end
         entry.version = entry.version or clean(getXMLString(xml, "modDesc.version"))
         entry.author = entry.author or clean(getXMLString(xml, "modDesc.author"))
-    end)
-    delete(xml)
-    if not ok then
-        log("Could not read %s: %s", path, tostring(err))
     end
+    delete(xml)
 end
 
 -- zip or folder: a zip mod's folder is <mods>/<name>/ inside the zip, so look for <mods>/<name>.zip
@@ -220,11 +217,10 @@ function ModReveal.findZip(entry)
         return nil
     end
     local base = entry.modDir:gsub("/+$", "")
-    local ok, exists = pcall(fileExists, base .. ".zip")
-    if not ok then
+    if base == "" then
         return nil
     end
-    return exists == true
+    return fileExists(base .. ".zip") == true
 end
 
 function ModReveal.getFileName(entry)
@@ -240,8 +236,8 @@ end
 function ModReveal.getSortTitle(entry)
     local title = entry.title or entry.modName
     if utf8ToLower ~= nil then
-        local ok, lower = pcall(utf8ToLower, title)
-        if ok and type(lower) == "string" then
+        local lower = utf8ToLower(tostring(title))
+        if type(lower) == "string" then
             return lower
         end
     end
@@ -256,10 +252,7 @@ function ModReveal.collect()
     for index, item in ipairs(ModReveal.getActiveModItems()) do
         local entry = ModReveal.newEntry(item, true)
         entry.loadIndex = index
-        local ok, err = pcall(ModReveal.readModDesc, entry, item)
-        if not ok then
-            log("Could not read modDesc of %s: %s", entry.modName, tostring(err))
-        end
+        ModReveal.readModDesc(entry, item)
         if entry.isDLC then
             table.insert(dlcs, entry)
         else
@@ -518,10 +511,7 @@ end
 
 local function ownerOf(object)
     if object ~= nil and type(object.getOwnerFarmId) == "function" then
-        local ok, farmId = pcall(object.getOwnerFarmId, object)
-        if ok then
-            return farmId
-        end
+        return object:getOwnerFarmId()
     end
     return nil
 end
@@ -543,8 +533,7 @@ function ModReveal.computeUsage()
     local mission = g_currentMission
     local myFarmId = nil
     if g_dedicatedServer == nil and mission ~= nil and type(mission.getFarmId) == "function" then
-        local ok, farmId = pcall(mission.getFarmId, mission)
-        myFarmId = ok and farmId or nil
+        myFarmId = mission:getFarmId()
     end
     local function count(list, field, ownField, iter)
         if type(list) ~= "table" then
@@ -562,8 +551,8 @@ function ModReveal.computeUsage()
     end
 
     if g_storeManager ~= nil and type(g_storeManager.getItems) == "function" then
-        local ok, items = pcall(g_storeManager.getItems, g_storeManager)
-        if ok and type(items) == "table" then
+        local items = g_storeManager:getItems()
+        if type(items) == "table" then
             for _, item in pairs(items) do
                 local u = type(item) == "table" and get(item.customEnvironment) or nil
                 if u ~= nil then
@@ -679,8 +668,8 @@ end
 
 function ModReveal.getDate()
     if getDate ~= nil then
-        local ok, value = pcall(getDate, "%Y-%m-%d %H:%M")
-        if ok and type(value) == "string" then
+        local value = getDate("%Y-%m-%d %H:%M")
+        if type(value) == "string" then
             return value
         end
     end
@@ -845,7 +834,7 @@ end
 
 function ModReveal.export()
     if ModReveal.usageReady then
-        pcall(ModReveal.computeUsage)
+        ModReveal.computeUsage()
     end
     local dir = ModReveal.getSettingsDir()
     createFolder(dir)
@@ -945,16 +934,11 @@ function ModReveal:loadMap(filename)
     if ModReveal.loadStamp == "" then
         ModReveal.loadStamp = "unknown"
     end
-    local ok, err = pcall(function()
-        ModReveal.collect()
-        ModReveal.updateChanges()
-        ModReveal.writeChangesFile()
-        ModReveal.export()
-        ModReveal.logSummary()
-    end)
-    if not ok then
-        log("Error while reading the mod list: %s", tostring(err))
-    end
+    ModReveal.collect()
+    ModReveal.updateChanges()
+    ModReveal.writeChangesFile()
+    ModReveal.export()
+    ModReveal.logSummary()
 
     addConsoleCommand("modReveal", "Lists every active mod with its version, author and file", "consoleList", ModReveal)
     addConsoleCommand("modRevealExport", "Writes the mod list to modSettings/FS25_ModReveal", "consoleExport", ModReveal)
@@ -983,7 +967,7 @@ function ModReveal.notifyChanges()
     local c = ModReveal.summary.changes
     local message = text("mr_notifyChanges", c.updated, c.new, c.removed)
     if g_currentMission ~= nil and g_currentMission.addIngameNotification ~= nil then
-        pcall(g_currentMission.addIngameNotification, g_currentMission, FSBaseMission.INGAME_NOTIFICATION_INFO, message)
+        g_currentMission:addIngameNotification(FSBaseMission.INGAME_NOTIFICATION_INFO, message)
     end
 end
 
@@ -999,15 +983,9 @@ function ModReveal:update(dt)
         ModReveal.usageTimer = ModReveal.usageTimer - dt
         if ModReveal.usageTimer <= 0 then
             ModReveal.usageTimer = nil
-            local ok, err = pcall(function()
-                ModReveal.computeUsage()
-                ModReveal.export()
-            end)
-            if ok then
-                log("Counted what each mod has in this savegame: %d mods add shop items but have nothing in it.", ModReveal.summary.idle or 0)
-            else
-                log("Could not count what is in the savegame: %s", tostring(err))
-            end
+            ModReveal.computeUsage()
+            ModReveal.export()
+            log("Counted what each mod has in this savegame: %d mods add shop items but have nothing in it.", ModReveal.summary.idle or 0)
         end
     end
     ModRevealDisplay.update(dt)

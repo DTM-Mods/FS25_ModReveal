@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<modDesc descVersion="114" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/modDesc.xsd">
+<modDesc descVersion="115" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/modDesc.xsd">
     <author>DTM Mods, Fennell</author>
-    <version>1.1.0.1</version>
+    <version>1.1.0.2</version>
     <title>
         <en>Mod Reveal</en>
-        <de>Mod Reveal</de>
     </title>
     <description>
         <en><![CDATA[Shows every mod and DLC your game is running, with its version, author and file name, and what each mod actually has in your savegame.
@@ -25,7 +24,10 @@ On every load the list is written to modSettings/FS25_ModReveal/ModList.txt and 
 
 Console: modReveal, modRevealExport, modRevealChanges, modRevealShow (opens the list).
 
-Only reads; it changes nothing in the game. Works in single player and multiplayer.]]></en>
+Only reads; it changes nothing in the game. Works in single player and multiplayer.
+
+Changelog 1.1.0.2:
+- Meets the GIANTS ModHub checks: errors are no longer hidden, so they show in the log.]]></en>
         <de><![CDATA[Zeigt jeden Mod und DLC, den dein Spiel nutzt, mit Version, Autor und Dateiname, und was jeder Mod tatsächlich in deinem Spielstand hat.
 
 Linke Alt + I öffnet die Liste. Reiter:
@@ -44,7 +46,10 @@ Bei jedem Laden wird die Liste nach modSettings/FS25_ModReveal/ModList.txt und M
 
 Konsole: modReveal, modRevealExport, modRevealChanges, modRevealShow (öffnet die Liste).
 
-Liest nur; ändert nichts im Spiel. Funktioniert im Einzelspieler und Multiplayer.]]></de>
+Liest nur; ändert nichts im Spiel. Funktioniert im Einzelspieler und Multiplayer.
+
+Changelog 1.1.0.2:
+- Erfüllt die GIANTS-ModHub-Prüfungen: Fehler werden nicht mehr versteckt und erscheinen im Log.]]></de>
     </description>
 
     <iconFilename>icon_ModReveal.dds</iconFilename>

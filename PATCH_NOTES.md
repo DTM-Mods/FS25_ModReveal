@@ -4,6 +4,9 @@
 
 # Patch notes
 
+## 1.1.0.2
+- Passes the GIANTS ModHub TestRunner: errors are no longer hidden (they show in the log), and the mod icon is a DXT1 .dds without mipmaps.
+
 ## 1.1.0.1
 - The game's HUD no longer shows through the window: the F1 help box, the player list and the other HUD parts are hidden while Mod Reveal is open, and come back when it closes (a HUD you had hidden stays hidden).
 - The window is drawn after everything else, so other mods' overlays don't cover it either.

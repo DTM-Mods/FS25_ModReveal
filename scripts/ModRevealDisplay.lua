@@ -130,8 +130,8 @@ end
 local function lower(value)
     value = tostring(value or "")
     if utf8ToLower ~= nil then
-        local ok, result = pcall(utf8ToLower, value)
-        if ok and type(result) == "string" then
+        local result = utf8ToLower(value)
+        if type(result) == "string" then
             return result
         end
     end
@@ -168,14 +168,13 @@ local function setHudHidden(hidden)
         return
     end
     if hidden then
-        local ok, visible = pcall(function() return hud.getIsVisible == nil or hud:getIsVisible() end)
-        state.hudWasVisible = ok and visible
+        state.hudWasVisible = hud.getIsVisible == nil or hud:getIsVisible() == true
         if state.hudWasVisible then
-            pcall(hud.setIsVisible, hud, false)
+            hud:setIsVisible(false)
         end
     elseif state.hudWasVisible then
         state.hudWasVisible = nil
-        pcall(hud.setIsVisible, hud, true)
+        hud:setIsVisible(true)
     end
 end
 
@@ -355,7 +354,7 @@ function ModRevealDisplay.open(source)
     state.firstOpen = false
     state.pending = nil
     if g_dedicatedServer == nil then
-        pcall(ModReveal.computeUsage)
+        ModReveal.computeUsage()
         state.list = nil
     end
 
@@ -593,8 +592,8 @@ function ModRevealDisplay.keyEvent(unicode, sym, modifier, isDown)
     if unicode ~= nil and unicode >= 32 and unicode ~= 127 and #state.search < 40 then
         local char = nil
         if unicodeToUtf8 ~= nil then
-            local ok, value = pcall(unicodeToUtf8, unicode)
-            char = ok and type(value) == "string" and value or nil
+            local value = unicodeToUtf8(unicode)
+            char = type(value) == "string" and value or nil
         end
         if char == nil and unicode < 128 then
             char = string.char(unicode)
